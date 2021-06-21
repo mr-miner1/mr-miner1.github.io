@@ -1,0 +1,101 @@
+body{
+    /* display: flex; */
+      font-family: "Raleway", sans-serif;
+      height: 100vh;
+       background-color: #464866;
+}
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+nav{
+    background-color: #595c837c;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    color: #aaabb8;
+    /* border-right: 5px solid navy; */
+    text-decoration: none;
+    padding: 0.3rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    font-size: 25px;
+    transition-duration: 0.75s;
+}
+nav a:hover, nav a:visited{
+    background-color: #676cb19d;
+    font-weight: 900;
+    transform:scale(1.5);
+}
+*{
+    margin:0;
+}
+.headercont{
+    color: #aaabb8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+}
+.buttonscont{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: -1;
+    height: 84.75vh;
+    background-image: url("https://cdn.discordapp.com/emojis/814626891142004746.gif");
+}
+.buttonscont a{
+    margin: 0.1rem;
+    font-family: "Slabo 27px", serif;
+    font-size: 20px;
+    height: 32px;
+    width: 32px;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.discord{
+    background-image: url("https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png");
+}
+.github{
+    background-image: url("https://www.iconninja.com/files/604/580/1001/github-development-code-coding-program-programming-icon.svg");
+    transform: scale(1.2);
+}
+.lastfm{
+    background-image: url("https://icon-library.com/images/last-fm-icon/last-fm-icon-28.jpg");
+}
+h3{
+    font-size: 0px;
+    margin-bottom: 0.5rem;
+        cursor: pointer;
+            transition-duration: 0.6s;
+}
+h2{
+    font-size: 38px;
+    margin-top: 2rem;
+    cursor: pointer;
+        transition-duration: 0.6s;
+}
+#betterbadges, #deepdark, #none{
+    font-size: 0px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #aaabb8;
+        transition-duration: 0.6s;
+}
+.subheadercont{
+    text-align: center;
+    color: #aaabb8;
+}
+#betterbadges:hover, #deepdark:hover{
+    text-decoration: underline;
+}
+h2:hover, h3:hover{
+    color: aliceblue;
+}
