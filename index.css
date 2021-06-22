@@ -42,11 +42,10 @@ nav a:hover, nav a:visited{
 }
 .buttonscont{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     z-index: -1;
-    height: 84.75vh;
-    background-image: url("https://cdn.discordapp.com/emojis/814626891142004746.gif");
+    margin: 2px;
 }
 .buttonscont a{
     margin: 0.1rem;
@@ -56,6 +55,7 @@ nav a:hover, nav a:visited{
     width: 32px;
     background-size: cover;
     margin-bottom: 0;
+    transition-duration: 0.3s;
 }
 
 .discord{
@@ -87,7 +87,7 @@ h2{
     cursor: pointer;
     text-decoration: none;
     color: #aaabb8;
-        transition-duration: 0.6s;
+    transition-duration: 0.6s;
 }
 .subheadercont{
     text-align: center;
@@ -98,4 +98,38 @@ h2{
 }
 h2:hover, h3:hover{
     color: aliceblue;
+}
+#betterbadges{
+
+}
+#preview{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.prevcont{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.buttonscont a:hover{
+    transform: scale(1.4);
+}
+.github:hover{
+    transform: scale(1.6) !important;
+}
+.show{
+    font-size: 30px !important;
+}
+.ree{
+    display: flex;
+    justify-content: center;
+}
+.randomimage{
+    background-image: url(https://picsum.photos/500/500); 
+    height: 500px; 
+    width: 500px;
+    margin-top: 75px;
+}
+.randomimage:hover{
+    filter: drop-shadow(0px 0px 7px white);
 }

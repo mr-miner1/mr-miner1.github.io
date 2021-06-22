@@ -12,6 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&amp;display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="https://i.imgur.com/JbdG93y.png">
+    <script>
+        setTimeout(quote, 10);
+        function quote(temp) {
+            let quote = document.getElementById("quote");
+            let author = document.getElementById("author");
+            let quoteLink = "https://api.quotable.io/random";
+            fetch(quoteLink)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    quote.innerHTML = data.content;
+                    author.innerHTML = "-" + data.author;
+                });
+        }
+    </script>
 </head>
 
 <body>
@@ -21,12 +37,21 @@
         <a class="idk">smth</a>
     </nav>
     <div class="headercont">
-        <h1>Under Construction</h1>
+        <h1>mr_miner.net</h1>
     </div>
     <div class="buttonscont">
         <a class="discord" href="https://dsc.bio/mrminer"></a>
         <a class="github" href="https://github.com/mr-miner1"></a>
         <a class="lastfm" href="https://www.last.fm/user/mr_miner"></a>
+    </div>
+    <div class="subheadercont">
+        <div class="ree">
+            <h3 class="randomimage"></h3>
+        </div>
+        <h3 class="show" id="quote">Random Quote</h3>
+        <h3 class="show" id="author"></h3>
+    </div>
+    </div>
 </body>
 
 </html>
