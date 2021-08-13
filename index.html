@@ -12,45 +12,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&amp;display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="https://i.imgur.com/JbdG93y.png">
-    <script>
-        setTimeout(quote, 10);
-        function quote(temp) {
-            let quote = document.getElementById("quote");
-            let author = document.getElementById("author");
-            let quoteLink = "https://api.quotable.io/random";
-            fetch(quoteLink)
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    quote.innerHTML = data.content;
-                    author.innerHTML = "-" + data.author;
-                });
-        }
-    </script>
 </head>
 
 <body>
-    <nav>
-        <a class="home" style="border-bottom: 2px solid #676cb1c2;" href="index.html">Home</a>
-        <a class="projects" href="projects.html">Projects</a>
-        <a class="idk">smth</a>
-    </nav>
     <div class="headercont">
-        <h1>mr_miner.net</h1>
+        <h1>Themes</h1>
     </div>
-    <div class="buttonscont">
-        <a class="discord" href="https://dsc.bio/mrminer"></a>
-        <a class="github" href="https://github.com/mr-miner1"></a>
-        <a class="lastfm" href="https://www.last.fm/user/mr_miner"></a>
-    </div>
-    <div class="subheadercont">
-        <div class="ree">
-            <h3 class="randomimage"></h3>
+    <div class="flex">
+        <div class="themecont">
+            <div id="activity" class="theme">
+                <h2>Cooler Activity Cards</h2>
+                <div class="themebtncont">
+                    <a class="powercord" target="_blank" href="https://canary.discord.com/channels/538759280057122817/755005710323941386/869600983955697694"><img src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+                    <a class="betterdiscord" target="_blank" href="https://github.com/mr-miner1/cooler-activity-status/blob/main/theme%5Bbd%5D.theme.css"><img src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
+                    <a class="github" target="_blank" href="https://github.com/mr-miner1/cooler-activity-status"><img src="https://media.discordapp.net/attachments/858737145358712853/875442334123327488/github-development-code-coding-program-programming-icon1.png"></a>
+                </div>
+            </div>
+            <div id="betterbadges" class="theme">
+                <h2>Better Badges</h2>
+                <div class="themebtncont">
+                    <a class="powercord" target="_blank" href="https://canary.discord.com/channels/538759280057122817/755005710323941386/849224982651338752"><img src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+                    <a class="betterdiscord" target="_blank" href="https://betterdiscord.app/theme/Better%20Badges"><img src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
+                    <a class="github" target="_blank" href="https://github.com/mr-miner1/Better-Badges"><img src="https://media.discordapp.net/attachments/858737145358712853/875442334123327488/github-development-code-coding-program-programming-icon1.png"></a>
+                </div>
+            </div>
+            <div id="deepdark" class="theme">
+                <h2>Deep Dark</h2>
+                <div class="themebtncont">
+                    <a class="powercord" target="_blank" href="https://canary.discord.com/channels/538759280057122817/755005710323941386/855850795025956914"><img src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+                    <a class="betterdiscord" target="_blank" href="https://betterdiscord.app/theme/Deep%20Dark"><img src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
+                    <a class="github" target="_blank" href="https://github.com/mr-miner1/Deep-Dark"><img src="https://media.discordapp.net/attachments/858737145358712853/875442334123327488/github-development-code-coding-program-programming-icon1.png"></a>
+                </div>
+            </div>
+            <div id="discordanimated" class="theme">
+                <h2>Discord Animated <br> Coming Soon (Never)</h2>
+            </div>
         </div>
-        <h3 class="show" id="quote">Random Quote</h3>
-        <h3 class="show" id="author"></h3>
-    </div>
     </div>
 </body>
 

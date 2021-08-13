@@ -1,135 +1,135 @@
 body{
     /* display: flex; */
       font-family: "Raleway", sans-serif;
-      height: 100vh;
-       background-color: #464866;
-}
-/* .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-nav{
-    background-color: #595c837c;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-nav a{
-    color: #aaabb8;
-    /* border-right: 5px solid navy; */
-    text-decoration: none;
-    padding: 0.3rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
-    font-size: 25px;
-    transition-duration: 0.75s;
-}
-nav a:hover, nav a:visited{
-    background-color: #676cb19d;
-    font-weight: 900;
-    transform:scale(1.5);
-}
-*{
-    margin:0;
+       background-color: #1f1f24;
+       color: white;
+       overflow-x: hidden;
 }
 .headercont{
-    color: #aaabb8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.2rem;
-}
-.buttonscont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    margin: 2px;
-}
-.buttonscont a{
-    margin: 0.1rem;
-    font-family: "Slabo 27px", serif;
-    font-size: 20px;
-    height: 32px;
-    width: 32px;
-    background-size: cover;
-    margin-bottom: 0;
-    transition-duration: 0.3s;
-}
-
-.discord{
-    background-image: url("https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png");
-}
-.github{
-    background-image: url("https://www.iconninja.com/files/604/580/1001/github-development-code-coding-program-programming-icon.svg");
-    transform: scale(1.2);
-}
-.lastfm{
-    background-image: url("https://icon-library.com/images/last-fm-icon/last-fm-icon-28.jpg");
-}
-h3{
-    font-size: 0px;
-    margin-bottom: 0.5rem;
-        cursor: pointer;
-            transition-duration: 0.6s;
-}
-h2{
-    font-size: 38px;
-    margin-top: 2rem;
-    cursor: pointer;
-        transition-duration: 0.6s;
-}
-#betterbadges, #deepdark, #none{
-    font-size: 0px;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    color: #aaabb8;
-    transition-duration: 0.6s;
-}
-.subheadercont{
+    width: 100%;
     text-align: center;
-    color: #aaabb8;
+    color:#eb759c;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: #26262c;
+    margin-bottom: 5%;
 }
-#betterbadges:hover, #deepdark:hover{
-    text-decoration: underline;
+*{
+    margin: 0;
 }
-h2:hover, h3:hover{
-    color: aliceblue;
+.themecont{
+    display: grid;
+    grid-row-gap: 60px;
+    grid-column-gap: 20px;
+    /* grid-gap: 60px; */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 650px));
+    grid-template-rows: repeat(auto-fit, minmax(350px, 350px));
+    height: 85vh;
+    width: 100%;
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+}
+.theme{
+    max-width: 870px;
+    height: 350px;
+    border: 2px #F74F86 solid;
+    border-radius: 15px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+}
+.theme:hover{
+    box-shadow: 0px 0px 8px 0px #F74F86;
 }
 #betterbadges{
-
-}
-#preview{
+    background-image: url("https://camo.githubusercontent.com/e8882f10babccc0709c86bbd99227433052954cc5abc33d1bb7e6dc9d388cc14/68747470733a2f2f692e696d6775722e636f6d2f4a4152735755562e676966");
     background-size: contain;
-    background-repeat: no-repeat;
 }
-.prevcont{
+#activity{
+    background-image: url("https://images-ext-1.discordapp.net/external/152xacuz_AORYhEL4CBOgaVde5GICf3xT7GihkdjGvQ/https/i.imgur.com/WfbPOSmh.jpg");
+    background-size: contain;
+}
+#deepdark{
+    background-size: contain;
+    background-position: bottom;
+    background-image: url("https://camo.githubusercontent.com/24a70b6df6e85582944921cdf859cf97bdca10797c4845a3c4a29ec94a39e494/68747470733a2f2f692e696d6775722e636f6d2f657254744c55692e676966");
+}
+#deepdark:hover h2{
+    opacity: 0.9;
+}
+#discordanimated{
+    background-size: fill;
+    background-image: url("https://media.discordapp.net/attachments/858737145358712853/875637438440173608/Ns8W3Jg1.gif");
+}
+.themebtncont > a{
+    height: 30px;
+    width: 30px;
+    border: 2px solid #F74F86;
+    border-radius: 4px;
+    text-decoration: none;
+    display:inline-block;
+    transition: 0.5s;
+    margin-right: 5px;
+    z-index: 100;
+}
+.themebtncont a:hover{
+    transform: scale(1.2);
+}
+.powercord > img{
+    height: 30px;
+    width: 30px;
+    filter: hue-rotate(100deg);
+    transform: scale(0.9);
+}
+.betterdiscord > img{
+    filter: hue-rotate(100deg);
+    height: 30px;
+    width: 30px;
+}
+.github > img{
+    height: 30px;
+    width: 30px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: #171718;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #26262c;
+}
+.themebtncont{
+    top: 104%;
+    position: relative;
+    left: 40%;
+}
+h2{
+    /* display: none; */
+    text-align:center;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-70px);
+    position: absolute;
+    padding-left: 10px;
+}
+.theme:hover h2{
+    /* display: block; */
+    transform: translateY(0px);
+    opacity: 0.9;
+}
+.flex{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-}
-.buttonscont a:hover{
-    transform: scale(1.4);
-}
-.github:hover{
-    transform: scale(1.6) !important;
-}
-.show{
-    font-size: 30px !important;
-}
-.ree{
-    display: flex;
-    justify-content: center;
-}
-.randomimage{
-    background-image: url(https://picsum.photos/500/500); 
-    height: 500px; 
-    width: 500px;
-    margin-top: 75px;
-}
-.randomimage:hover{
-    filter: drop-shadow(0px 0px 7px white);
+    align-items: center;
+    height: 85vh;
+    width: 100%;
 }
