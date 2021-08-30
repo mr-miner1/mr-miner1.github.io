@@ -1,132 +1,159 @@
-body{
-    /* display: flex; */
-      font-family: "Raleway", sans-serif;
-       background-color: #1f1f24;
-       color: white;
-       overflow-x: hidden;
-}
-.headercont{
-    width: 100%;
-    text-align: center;
-    color:#eb759c;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    background-color: #26262c;
-    margin-bottom: 5%;
-}
-*{
+* {
     margin: 0;
 }
-.themecont{
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    background-color: #1f1f24;
+    color: white;
+    gap: calc(16px * 5);
+}
+
+.headercont {
+    align-self: stretch;
+    text-align: center;
+    color: #eb759c;
+    display: flex;
+    justify-content: center;
+    background-color: #26262c;
+    padding: 10px 0;
+}
+
+.themecont {
+    padding: 0 calc(16px * 5);
     display: grid;
     grid-row-gap: 60px;
     grid-column-gap: 20px;
-    /* grid-gap: 60px; */
     grid-template-columns: repeat(auto-fit, minmax(220px, 650px));
-    grid-template-rows: repeat(auto-fit, minmax(350px, 350px));
-    height: 85vh;
-    width: 100%;
-    /* position: absolute; */
     justify-content: center;
     align-items: center;
 }
-.theme{
-    max-width: 870px;
+
+.theme {
+    position: relative;
     height: 350px;
-    border: 2px #F74F86 solid;
+    border: 2px solid #F74F86;
     border-radius: 15px;
-    background-position:center;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: 0.5s;
 }
-.theme:hover{
-    box-shadow: 0px 0px 8px 0px #F74F86;
+
+.theme:hover {
+    box-shadow: 0 0 8px 0 #F74F86;
 }
-#betterbadges{
+
+#betterbadges {
     background-image: url("https://camo.githubusercontent.com/e8882f10babccc0709c86bbd99227433052954cc5abc33d1bb7e6dc9d388cc14/68747470733a2f2f692e696d6775722e636f6d2f4a4152735755562e676966");
     background-size: contain;
 }
-#activity{
+
+#activity {
     background-image: url("https://images-ext-1.discordapp.net/external/152xacuz_AORYhEL4CBOgaVde5GICf3xT7GihkdjGvQ/https/i.imgur.com/WfbPOSmh.jpg");
-    background-size: contain;
+    /*background-size: contain;*/
 }
-#deepdark{
-    background-size: contain;
+
+#deepdark {
+    /*background-size: contain;*/
     background-position: bottom;
     background-image: url("https://camo.githubusercontent.com/24a70b6df6e85582944921cdf859cf97bdca10797c4845a3c4a29ec94a39e494/68747470733a2f2f692e696d6775722e636f6d2f657254744c55692e676966");
 }
-#deepdark:hover h2{
-    opacity: 0.9;
-}
-#discordanimated{
-    background-size: fill;
+
+/*#deepdark:hover h2 {*/
+/*    opacity: 0.9;*/
+/*    display: flex;*/
+/*    padding: 4px 10px;*/
+/*    background: rgba(0,0,0,0.2);*/
+/*}*/
+
+#discordanimated {
+    background-size: cover;
     background-image: url("https://media.discordapp.net/attachments/858737145358712853/875637438440173608/Ns8W3Jg1.gif");
 }
-.themebtncont > a{
+
+.themebtncont > a {
     height: 30px;
     width: 30px;
     border: 2px solid #F74F86;
     border-radius: 4px;
     text-decoration: none;
-    display:inline-block;
+    display: inline-block;
     transition: 0.5s;
     margin-right: 5px;
     z-index: 100;
 }
-.themebtncont a:hover{
+
+.themebtncont a:hover {
     transform: scale(1.2);
 }
-.powercord > img{
+
+.powercord > img {
     height: 30px;
     width: 30px;
     filter: hue-rotate(100deg);
     transform: scale(0.9);
 }
-.betterdiscord > img{
+
+.betterdiscord > img {
     filter: hue-rotate(100deg);
     height: 30px;
     width: 30px;
 }
-.github > img{
+
+.github > img {
     height: 30px;
     width: 30px;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #171718;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #26262c;
 }
-.themebtncont{
-    top: 104%;
-    position: relative;
-    left: 40%;
+
+.themebtncont {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -48px;
 }
-h2{
-    /* display: none; */
-    text-align:center;
+
+h2 {
+    text-align: center;
     opacity: 0;
+    display: flex;
     transition: 0.5s;
     transform: translateY(-70px);
     position: absolute;
-    padding-left: 10px;
+    margin: 10px;
+    padding: 4px 10px;
 }
-.theme:hover h2{
-    /* display: block; */
+
+.theme:hover h2 {
     transform: translateY(0px);
     opacity: 0.9;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
 }
-.flex{
+
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
