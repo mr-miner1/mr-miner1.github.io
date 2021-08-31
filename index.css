@@ -93,10 +93,12 @@ body {
     filter: grayscale(1);
     cursor: not-allowed;
 }
+
 ::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #171718;
     border-radius: 15px;
