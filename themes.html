@@ -25,6 +25,7 @@
 <div class="themecont">
 	<div id="activity" class="theme">
 		<h2>Cooler Activity Cards</h2>
+		<span class="stars"><h2 class="fas fa-star"><label id="cooler-activity-status-stars"></label></h2></span>
 		<div class="themebtncont">
 			<a class="powercord" target="_blank"
 			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/869600983955697694"><img
@@ -38,6 +39,7 @@
 	</div>
 	<div id="betterbadges" class="theme">
 		<h2>Better Badges</h2>
+		<span class="stars"><h2 class="fas fa-star"><label id="Better-Badges-stars"></label></h2></span>
 		<div class="themebtncont">
 			<a class="powercord" target="_blank"
 			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/849224982651338752"><img
@@ -50,6 +52,7 @@
 	</div>
 	<div id="deepdark" class="theme">
 		<h2>Deep Dark</h2>
+		<span class="stars"><h2 class="fas fa-star"><label id="Deep-Dark-stars"></label></h2></span>
 		<div class="themebtncont">
 			<a class="powercord" target="_blank"
 			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/855850795025956914"><img
@@ -64,6 +67,17 @@
 		<h2>Discord Animated <br> Coming Soon (Never)</h2>
 	</div> -->
 </div>
+<script>
+	let stars = async (name)  => {
+		let api = await fetch(`https://api.github.com/repos/mr-miner1/${name}`)
+		api = await api.json()
+		let starscount = api.stargazers_count
+		document.getElementById(`${name}-stars`).textContent = starscount;
+	}
+	stars("cooler-activity-status")
+	stars("Better-Badges")
+	stars("Deep-Dark")
+</script>
 </body>
 
 </html>

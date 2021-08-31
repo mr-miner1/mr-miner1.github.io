@@ -32,7 +32,7 @@ body {
     border: 2px solid transparent;
 
 }
-.icon:hover{
+.headercont .icon:hover{
     border: 2px solid #eb759c;
     border-radius: 100px;
 }
@@ -181,4 +181,26 @@ h2 {
     align-items: center;
     height: 85vh;
     width: 100%;
+}
+.stars{
+    font-size: 25px;
+    width: 100%;
+    text-align: end;
+    border-radius: 5px;
+    background: none !important;
+    color: white;
+    display: flex;
+    justify-content:flex-end;
+}
+.stars h2::before{
+    font-size: 20px;
+    content: '\f005';
+    padding-right: 4px;
+}
+.stars label{
+    font-family: "Raleway", sans-serif;
+}
+.stars h2{
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 25px;
 }

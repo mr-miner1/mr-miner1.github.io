@@ -25,6 +25,7 @@
 <div class="plugincont">
 	<div id="discordfm" class="plugin">
 		<h2>Discord.fm</h2>
+		<span class="stars"><h2 class="fas fa-star"><label id="DiscordFm-stars"></label></h2></span>
 		<div class="pluginbtncont">
 			<a class="powercord" target="_blank"
 			   href="https://canary.discord.com/channels/538759280057122817/755005584322854972/880700661132587018"><img
@@ -35,6 +36,15 @@
 		</div>
 	</div>
 </div>
+<script>
+		let stars = async (name)  => {
+		let api = await fetch(`https://api.github.com/repos/mr-miner1/${name}`)
+		api = await api.json()
+		let starscount = api.stargazers_count
+		document.getElementById(`${name}-stars`).textContent = starscount;
+	}
+	stars("DiscordFm")
+</script>
 </body>
 
 </html>

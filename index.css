@@ -116,9 +116,10 @@ body {
     line-height: 100px;
 }
 .aboutmecont h2{
-    font-size: 12px;
+    font-size: 14px;
     /* color: white; */
-    font-family: 'Slabo 27px', serif;
+    /* font-family: 'Slabo 27px', serif; */
+    transform: translateY(-30px);
 }
 .aboutmecont .item h2{
     background: transparent !important;
@@ -134,21 +135,25 @@ body {
     border-radius: 5px;
 }
 #github{
-    border: 2px solid black;
-    color: black;
+    border: 2px solid white;
+    color: white;
 }
+#github:hover{box-shadow: 0px 0px 8px 0px black;}
 #discord{
     border: 2px solid #627ee4;
     color: #627ee4;
 }
+#discord:hover{box-shadow: 0px 0px 8px 0px #627ee4;}
 #lastfm{
     border: 2px solid #D51007;
     color: #D51007;
 }
+#lastfm:hover{box-shadow: 0px 0px 8px 0px #D51007;}
 #spotify{
     border: 2px solid #1DB954;
     color: #1DB954;
 }
+#spotify:hover{box-shadow: 0px 0px 8px 0px #1DB954;}
 ::-webkit-scrollbar {
     width: 10px;
 }
