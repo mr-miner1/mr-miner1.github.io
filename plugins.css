@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    background-color: #1f1f24;
+    color: white;
+    gap: calc(16px * 5);
+}
+
+.headercont {
+    align-self: stretch;
+    text-align: center;
+    color: #4F86F7;
+    display: flex;
+    justify-content: center;
+    background-color: #26262c;
+    padding: 10px 0;
+}
+.icon{
+    position: absolute;
+    left: 10px;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    transition: 0.5s;
+    /* border-radius: 100px; */
+    border: 2px solid transparent;
+
+}
+.icon:hover{
+    border: 2px solid #4F86F7;
+    border-radius: 100px;
+}
+.plugincont {
+    padding: 0 calc(16px * 5);
+    display: grid;
+    grid-row-gap: 60px;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 650px));
+    justify-content: center;
+    align-items: center;
+}
+
+.plugin {
+    position: relative;
+    height: 350px;
+    border: 2px solid #3765c2;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.plugin:hover {
+    box-shadow: 0 0 8px 0 #3765c2;
+}
+
+#discordfm {
+    background-image: url("https://media.discordapp.net/attachments/756856464374628352/882140799272382475/ezgif.com-gif-maker.gif");
+    background-size: contain;
+}
+
+.pluginbtncont > a {
+    height: 30px;
+    width: 30px;
+    border: 2px solid #3765c2;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s;
+    margin-right: 5px;
+    z-index: 100;
+}
+
+.pluginbtncont a:hover {
+    transform: scale(1.2);
+}
+
+.powercord > img {
+    height: 30px;
+    width: 30px;
+    filter: hue-rotate(0deg) contrast(1.4);
+    transform: scale(0.9);
+}
+
+.betterdiscord > img {
+    height: 30px;
+    width: 30px;
+}
+.betterdiscord{
+    filter: grayscale(0.6) opacity(0.6);
+}
+.betterdiscord:hover{
+    filter: grayscale(1) opacity(0.6);
+    cursor:not-allowed;
+}
+.github > img {
+    height: 27px;
+    width: 27px;
+    display: block;
+    margin-left: 1.99999px;
+    margin-top: 1px;
+    filter: hue-rotate(250deg);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #171718;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #26262c;
+}
+
+.pluginbtncont {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -48px;
+}
+
+h2 {
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    transition: 0.5s;
+    transform: translateY(-70px);
+    position: absolute;
+    margin: 10px;
+    padding: 4px 10px;
+}
+
+.plugin:hover h2 {
+    transform: translateY(0px);
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+}
