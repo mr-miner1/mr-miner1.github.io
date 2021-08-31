@@ -12,13 +12,15 @@
 	      rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&amp;display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="icon" href="https://image.flaticon.com/icons/png/512/733/733609.png">
+    <link rel="stylesheet" href="http://furfsky.net/font.css">
+	<link rel="icon" href="https://image.flaticon.com/icons/png/512/733/733609.png">
 </head>
 
 <body>
 <div class="headercont">
 	<h1>mr_miner</h1>
 </div>
+<h1 class="sub">Projects</h1>
 <div class="itemcont">
 	<div id="themes" class="item">
         <i class="fas fa-paint-roller icon"></i>
@@ -33,6 +35,33 @@
         <i class="fas fa-code-branch icon"></i>
 	</div>
 </div>
+<h1 class="sub">About Me</h1>
+<div class="itemcont aboutmecont">
+	<div id="github" class="item">
+        <i class="fab fa-github icon"></i>
+		<h2>Github</h2>
+	</div>
+	<div id="discord" class="item">
+		<h2>Discord</h2>
+        <i class="fab fa-discord icon"></i>
+	</div>
+	<div id="lastfm" class="item">
+		<h2>Last.fm</h2>
+        <i class="fab fa-lastfm icon"></i>
+	</div>
+	<div id="spotify" class="item">
+		<h2>Spotify</h2>
+        <i class="fab fa-spotify icon"></i>
+	</div>
+</div>
+<h3 class="sub">Uncool 14 year old who does a little bit of coding but is really bad at it.
+	<br><span style='font-family: "Minecraft", sans-serif; font-size: 14px;'>Administrator  in 
+	<a target="_blank" href="https://discord.gg/fsr" style='text-decoration: none; color: rgb(147, 188, 224);'>
+		<span style="color:#c87333">Furf</span>
+		<span style="color:#c65df0">Sky</span>
+		<span style="color:#fbcc6c">Reborn</span></a>
+		</span>
+</h3>
 <script>
     document.getElementById("themes").addEventListener("click", (e) => {
         e.preventDefault()
@@ -41,6 +70,22 @@
     document.getElementById("plugins").addEventListener("click", (e) => {
         e.preventDefault()
         window.location.href = "./plugins.html"
+    })
+	document.getElementById("github").addEventListener("click", (e) => {
+        e.preventDefault()
+        window.location.href = "https://github.com/mr-miner1"
+    })
+    document.getElementById("discord").addEventListener("click", (e) => {
+        e.preventDefault()
+        window.location.href = "https://discords.com/bio/p/mrminer"
+    })
+	document.getElementById("lastfm").addEventListener("click", (e) => {
+        e.preventDefault()
+        window.location.href = "https://www.last.fm/user/mr_miner/library"
+    })
+    document.getElementById("spotify").addEventListener("click", (e) => {
+        e.preventDefault()
+        window.location.href = "https://open.spotify.com/user/fk12y2a8qlp8k4p4ne304og9p"
     })
 </script>
 </body>
