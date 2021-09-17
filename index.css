@@ -22,7 +22,7 @@ body {
 }
 .headercont h1{
     background-image: 
-    linear-gradient(to right, #F74F86, #3765c2, #2a7446); 
+    linear-gradient(to right, #F74F86, #3765c2); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     animation: move 1000s linear infinite;
@@ -37,7 +37,7 @@ body {
     display: grid;
     grid-row-gap: 20px;
     grid-column-gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(70px, 330px));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 330px));
     justify-content: center;
     align-items: center;
 }

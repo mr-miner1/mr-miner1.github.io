@@ -45,7 +45,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.animate{
+    animation: bg 0.85s 1 forwards;
+}
 .plugin {
     position: relative;
     height: 350px;
@@ -54,9 +56,23 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 0.5s;
+    transition: 0.5s box-shadow;
 }
-
+@keyframes bg {
+    0%{
+        background-position-x: -1000px;
+    }
+    25%{
+        transform: scale(0.9);
+    }
+    50%{
+        background-position-x: center;
+        transform: scale(0.9);
+    }
+    75%{
+        transform: scale(1);
+    }
+}
 .plugin:hover {
     box-shadow: 0 0 8px 0 #3765c2;
 }
@@ -65,8 +81,11 @@ body {
     background-image: url("https://media.discordapp.net/attachments/756856464374628352/882140799272382475/ezgif.com-gif-maker.gif");
     background-size: contain;
 }
-
-.pluginbtncont > a {
+#bettersettings{
+    background-image: url("https://camo.githubusercontent.com/a87732adcb3156e8241d61c7b963adf111be63d086db731ba198ef705590c3f5/68747470733a2f2f692e696d6775722e636f6d2f6270716863654c2e676966");
+    background-size: contain;
+}
+.pluginbtncont > :is(a, button) {
     height: 30px;
     width: 30px;
     border: 2px solid #3765c2;
@@ -75,18 +94,23 @@ body {
     display: inline-block;
     transition: 0.5s;
     margin-right: 5px;
-    z-index: 100;
 }
 
-.pluginbtncont a:hover {
+.pluginbtncont :is(a:hover, button:hover) {
     transform: scale(1.2);
 }
-
+.powercord{
+    background-color: transparent;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("https://powercord.dev/assets/powercord.1eb41971.svg"); */
+}
 .powercord > img {
-    height: 30px;
-    width: 30px;
-    filter: hue-rotate(0deg) contrast(1.4);
-    transform: scale(0.9);
+    height: 25px;
+    width: 25px;
+    filter: contrast(1.4);
+    
 }
 
 .betterdiscord > img {
@@ -182,4 +206,45 @@ h2 {
 .stars h2{
     background: rgba(0, 0, 0, 0.5);
     font-size: 25px;
+    padding-bottom: 8px;
+}
+.arrows{
+    background:rgba(0, 0, 0, 0.5);
+    border-radius: 9px;
+    padding: 10px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+    transition: 0.5s transform, 0.5s opacity, 0.2s color;
+    z-index: 1;
+}
+.arrowcont{
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    height: 100%;
+    align-items: center;
+    z-index: -1;
+}
+.plugin:hover .arrows{
+    transform: translateX(0px) !important;
+    opacity: 1;
+}
+#next{
+    transform: translateX(50px);
+    cursor: pointer;
+}
+#previous{
+    transform: translateX(-50px);
+    cursor: not-allowed;
+}
+/* .arrows:hover{
+    transform: scale(1.1);
+} */
+#next:hover, #previous:hover{
+    transform: translateX(0px) scale(1.1) !important;
+    color: #4F86F7;
 }

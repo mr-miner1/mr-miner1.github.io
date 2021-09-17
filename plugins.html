@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mr_miner</title>
+	<title>Plugins</title>
 	<link href="plugins.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&amp;family=Raleway:wght@100&amp;display=swap"
 	      rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&amp;display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="icon" href="https://image.flaticon.com/icons/png/512/875/875149.png">
+	<!-- <link rel="icon" href="https://image.flaticon.com/icons/png/512/875/875149.png"> -->
 	<script src="https://kit.fontawesome.com/ac4f272048.js" crossorigin="anonymous"></script>
 </head>
 
@@ -22,18 +22,37 @@
 	</a>
 	<h1>Plugins</h1>
 </div>
+<!-- <h1 id="copied">git clone command copied!</h1> -->
 <div class="plugincont">
 	<div id="discordfm" class="plugin">
 		<h2>Discord.fm</h2>
 		<span class="stars"><h2 class="fas fa-star"><label id="DiscordFm-stars"></label></h2></span>
 		<div class="pluginbtncont">
-			<a class="powercord" target="_blank"
-			   href="https://canary.discord.com/channels/538759280057122817/755005584322854972/880700661132587018"><img
-				src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+			<button class="powercord" onclick="copy('DiscordFm')">
+				<img src="https://powercord.dev/assets/powercord.1eb41971.svg">
+			</button>
 			<a class="betterdiscord" target="_blank"><img src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
 			<a class="github" target="_blank" href="https://github.com/mr-miner1/DiscordFm">
 				<img src="https://media.discordapp.net/attachments/756856464374628352/882104992104849448/github.png"></a>
 		</div>
+	</div>
+		<div id="bettersettings" class="plugin">
+			<h2>Better Settings</h2>
+			<span class="stars"><h2 class="fas fa-star"><label id="better-settings-stars"></label></h2></span>
+				<div class="arrowcont">
+				<!-- <button class="arrows" id="next"><</button> -->
+				<i id="previous" class="fas fa-chevron-left arrows"></i>
+				<!-- <button class="arrows" id="previous">></button> -->
+				<i id="next" class="fas fa-chevron-right arrows"></i>
+			</div>
+			<div class="pluginbtncont">
+				<button class="powercord" onclick="copy('better-settings')">
+					<img src="https://powercord.dev/assets/powercord.1eb41971.svg">
+				</button>
+				<a class="betterdiscord" target="_blank"><img src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
+				<a class="github" target="_blank" href="https://github.com/mr-miner1/better-settings">
+					<img src="https://media.discordapp.net/attachments/756856464374628352/882104992104849448/github.png"></a>
+			</div>
 	</div>
 </div>
 <script>
@@ -44,6 +63,44 @@
 		document.getElementById(`${name}-stars`).textContent = starscount;
 	}
 	stars("DiscordFm")
+	stars("better-settings")
+	const copy = (name) =>{
+		navigator.clipboard.writeText(`cd powercord/src/Powercord/plugins && git clone https://github.com/mr-miner1/${name}`);
+		document.querySelector(".headercont h1").textContent = "git clone command copied!"
+		setTimeout(() => {
+			document.querySelector(".headercont h1").textContent = "Plugins"
+		}, 700);
+
+	}
+	const next = () =>{
+		document.getElementById("next").addEventListener("click", (e) =>{
+			// e.preventDefault()
+			// console.log("uwu")
+			let nextelement = document.getElementById("bettersettings")
+			let currentimage = nextelement.style.backgroundImage
+			console.log(currentimage)
+			if (currentimage == ""){
+				nextelement.style = "background-image:url('https://images-ext-1.discordapp.net/external/8aTn-wujqRSk-zhg_rQQPPQTfgaa5vgePvNhMBB1iG8/https/i.imgur.com/HbboK1r.png');"
+			}else if(currentimage == 'url("https://images-ext-1.discordapp.net/external/8aTn-wujqRSk-zhg_rQQPPQTfgaa5vgePvNhMBB1iG8/https/i.imgur.com/HbboK1r.png")'){
+				nextelement.style = "background-image: url('https://i.ibb.co/fHgS7vp/chrome-b-DXWvyuc-Z5.png')"
+			} else if (currentimage == `url("https://i.ibb.co/fHgS7vp/chrome-b-DXWvyuc-Z5.png")`){
+				nextelement.style = 'background-image: url("https://camo.githubusercontent.com/ff16fd3455ae434dd2e1528bf56300bece009877547fc8c5281a48a8b446fd78/68747470733a2f2f692e696d6775722e636f6d2f7773485672645a2e676966")'
+			}else if (currentimage == `url("https://i.ibb.co/CP4g8Sz/chrome-wo-Gyf-Zg7-UQ.png")`){
+				nextelement.style = "background-image: url('https://i.ibb.co/CP4g8Sz/chrome-wo-Gyf-Zg7-UQ.png')"
+			}else if (currentimage == `url("https://camo.githubusercontent.com/ff16fd3455ae434dd2e1528bf56300bece009877547fc8c5281a48a8b446fd78/68747470733a2f2f692e696d6775722e636f6d2f7773485672645a2e676966")`){
+				nextelement.style = ""
+			}
+			nextelement.classList +=  " animate"
+			document.getElementById("next").style = "color: #3765c2;"
+			setTimeout(() => {
+				document.getElementById("next").style = ""
+			}, 300);
+			setTimeout(() => {
+				nextelement.classList = "plugin"
+			}, 850);
+		})
+	}
+	next()
 </script>
 </body>
 

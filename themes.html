@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mr_miner's themes</title>
+	<title>Themes</title>
 	<link href="themes.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&amp;family=Raleway:wght@100&amp;display=swap"
 	      rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&amp;display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="icon" href="https://image.flaticon.com/icons/png/512/103/103456.png">
+	<!-- <link rel="icon" href="https://image.flaticon.com/icons/png/512/103/103456.png"> -->
 	<script src="https://kit.fontawesome.com/ac4f272048.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,9 +27,9 @@
 		<h2>Cooler Activity Cards</h2>
 		<span class="stars"><h2 class="fas fa-star"><label id="cooler-activity-status-stars"></label></h2></span>
 		<div class="themebtncont">
-			<a class="powercord" target="_blank"
-			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/869600983955697694"><img
-				src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+			<button class="powercord" onclick="copy('cooler-activity-status')">
+				<img src="https://powercord.dev/assets/powercord.1eb41971.svg">
+			</button>
 			<a class="betterdiscord" target="_blank"
 			   href="https://github.com/mr-miner1/cooler-activity-status/blob/main/theme%5Bbd%5D.theme.css"><img
 				src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
@@ -41,9 +41,9 @@
 		<h2>Better Badges</h2>
 		<span class="stars"><h2 class="fas fa-star"><label id="Better-Badges-stars"></label></h2></span>
 		<div class="themebtncont">
-			<a class="powercord" target="_blank"
-			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/849224982651338752"><img
-				src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+			<button class="powercord" onclick="copy('Better-Badges')">
+				<img src="https://powercord.dev/assets/powercord.1eb41971.svg">
+			</button>
 			<a class="betterdiscord" target="_blank" href="https://betterdiscord.app/theme/Better%20Badges"><img
 				src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
 			<a class="github" target="_blank" href="https://github.com/mr-miner1/Better-Badges"><img
@@ -54,9 +54,9 @@
 		<h2>Deep Dark</h2>
 		<span class="stars"><h2 class="fas fa-star"><label id="Deep-Dark-stars"></label></h2></span>
 		<div class="themebtncont">
-			<a class="powercord" target="_blank"
-			   href="https://canary.discord.com/channels/538759280057122817/755005710323941386/855850795025956914"><img
-				src="https://powercord.dev/assets/powercord.1eb41971.svg"></a>
+			<button class="powercord" onclick="copy('Deep-Dark')">
+				<img src="https://powercord.dev/assets/powercord.1eb41971.svg">
+			</button>
 			<a class="betterdiscord" target="_blank" href="https://betterdiscord.app/theme/Deep%20Dark"><img
 				src="https://mrrobotjs.github.io/BetterDocs/images/siteicon.png"></a>
 			<a class="github" target="_blank" href="https://github.com/mr-miner1/Deep-Dark"><img
@@ -77,6 +77,14 @@
 	stars("cooler-activity-status")
 	stars("Better-Badges")
 	stars("Deep-Dark")
+	const copy = (name) =>{
+		navigator.clipboard.writeText(`cd powercord/src/Powercord/themes && git clone https://github.com/mr-miner1/${name}`);
+		document.querySelector(".headercont h1").textContent = "git clone command copied!"
+		setTimeout(() => {
+			document.querySelector(".headercont h1").textContent = "Plugins"
+		}, 700);
+
+	}
 </script>
 </body>
 

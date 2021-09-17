@@ -93,7 +93,7 @@ body {
     background-image: url("https://media.discordapp.net/attachments/858737145358712853/875637438440173608/Ns8W3Jg1.gif");
 }
 
-.themebtncont > a {
+.themebtncont > :is(a, button) {
     height: 30px;
     width: 30px;
     border: 2px solid #F74F86;
@@ -102,18 +102,21 @@ body {
     display: inline-block;
     transition: 0.5s;
     margin-right: 5px;
-    z-index: 100;
 }
 
-.themebtncont a:hover {
+.themebtncont :is(a:hover, button:hover) {
     transform: scale(1.2);
 }
-
+.powercord{
+    background-color: transparent;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
 .powercord > img {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     filter: hue-rotate(100deg);
-    transform: scale(0.9);
 }
 
 .betterdiscord > img {
@@ -203,4 +206,5 @@ h2 {
 .stars h2{
     background: rgba(0, 0, 0, 0.5);
     font-size: 25px;
+    padding-bottom: 8px;
 }
